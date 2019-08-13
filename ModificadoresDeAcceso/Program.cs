@@ -29,7 +29,26 @@ namespace ModificadoresDeAcceso
                 Console.WriteLine("La CURP debe ser de 18 caractéres");
             }
 
-           
+            Cuenta cuenta
+                = new Cuenta();
+
+            cuenta.Propietario = "";
+            cuenta.Saldo = 5;
+
+            Console.WriteLine("Propietario: " + cuenta.Propietario);
+            Console.WriteLine("Saldo: " + cuenta.Saldo);
+
+            try
+            {
+                cuenta.Identificador = "123456789013";
+                Console.WriteLine("Identificador: " + cuenta.Identificador);
+            }
+
+            catch (Exception a)
+            {
+                Console.WriteLine("Debe de ser entre 10 y 14 caractéres :(");
+            }
+
 
             Console.ReadLine();
         }
